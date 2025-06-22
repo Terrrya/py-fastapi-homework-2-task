@@ -2,7 +2,10 @@ import os
 
 from database.models import (
     Base,
-    MovieModel
+    MovieModel,
+    GenreModel,
+    ActorModel,
+    LanguageModel,
 )
 from database.session_sqlite import reset_sqlite_database as reset_database
 
