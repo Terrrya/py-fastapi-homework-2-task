@@ -88,7 +88,7 @@ async def create_movie(
 ):
     try:
         movie_data = MovieDetailInputSchema(**body_data)
-    except ValidationError as e:
+    except ValidationError:
         raise HTTPException(status_code=400, detail="Invalid input data.")
 
     genres = await crud.get_or_create_by_name(
@@ -176,7 +176,7 @@ async def update_movie(
 ):
     try:
         MovieUpdateInputSchema(**body_data)
-    except ValidationError as e:
+    except ValidationError:
         raise HTTPException(status_code=400, detail="Invalid input data.")
 
     result = await db.execute(
