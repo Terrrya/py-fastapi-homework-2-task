@@ -52,13 +52,16 @@ class CountryDetailSchema(BaseDetailSchema):
     name: str | None
 
 
-class GenreDetailSchema(BaseDetailSchema): ...
+class GenreDetailSchema(BaseDetailSchema):
+    pass
 
 
-class ActorDetailSchema(BaseDetailSchema): ...
+class ActorDetailSchema(BaseDetailSchema):
+    pass
 
 
-class LanguageDetailSchema(BaseDetailSchema): ...
+class LanguageDetailSchema(BaseDetailSchema):
+    pass
 
 
 class MovieDetailSchema(BaseDetailSchema):
