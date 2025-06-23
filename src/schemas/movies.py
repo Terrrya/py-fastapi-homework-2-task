@@ -19,11 +19,11 @@ class MovieUpdateInputSchema(BaseModel):
 
     @field_validator("date")
     @classmethod
-    def validate_date(cls, v):
+    def validate_date(cls, value):
         today = date_.today()
-        if v is not None and v > today + timedelta(weeks=52):
+        if value is not None and value > today + timedelta(weeks=52):
             raise HTTPException(status_code=400, detail="Invalid input data.")
-        return v
+        return value
 
 
 class MovieDetailInputSchema(MovieUpdateInputSchema):
